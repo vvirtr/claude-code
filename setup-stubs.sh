@@ -53,10 +53,12 @@ export class SandboxManager {
   static async cleanupAfterCommand() {}
 }
 export class SandboxViolationStore {
-  constructor() { this.violations = []; }
-  getViolations() { return this.violations; }
-  add(v) { this.violations.push(v); }
+  constructor() { this.violations = []; this._listeners = []; }
+  add(v) { this.violations.push(v); this._listeners.forEach(fn => fn(this.violations)); }
   getAll() { return this.violations; }
+  getViolations() { return this.violations; }
+  getTotalCount() { return this.violations.length; }
+  subscribe(fn) { this._listeners.push(fn); return () => { this._listeners = this._listeners.filter(l => l !== fn); }; }
   clear() { this.violations = []; }
 }
 export const SandboxRuntimeConfigSchema = z.object({}).passthrough();
