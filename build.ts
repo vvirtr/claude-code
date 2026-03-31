@@ -30,7 +30,7 @@ const FEATURE_FLAGS: Record<string, boolean> = {
   COMMIT_ATTRIBUTION: true,
   COMPACTION_REMINDERS: true,
   CONNECTOR_TEXT: false,
-  CONTEXT_COLLAPSE: true,
+  CONTEXT_COLLAPSE: false,
   COORDINATOR_MODE: false,
   COWORKER_TYPE_TELEMETRY: false,
   DAEMON: false,
