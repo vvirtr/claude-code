@@ -27,7 +27,7 @@ const FEATURE_FLAGS: Record<string, boolean> = {
   CCR_MIRROR: false,
   CCR_REMOTE_SETUP: false,
   CHICAGO_MCP: false,
-  COMMIT_ATTRIBUTION: true,
+  COMMIT_ATTRIBUTION: false,
   COMPACTION_REMINDERS: true,
   CONNECTOR_TEXT: false,
   CONTEXT_COLLAPSE: false,
