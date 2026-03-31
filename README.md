@@ -50,7 +50,7 @@ bun dist/cli.js
 bun dist/cli.js --version              # Версия
 bun dist/cli.js --help                 # Все опции
 bun dist/cli.js --model opus           # Выбор модели (sonnet/opus/haiku)
-bun dist/cli.js -p "prompt" --json     # JSON output
+bun dist/cli.js -p "prompt"            # JSON output
 bun dist/cli.js -c                     # Продолжить последнюю сессию
 bun dist/cli.js -d                     # Debug mode
 ```
