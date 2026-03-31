@@ -82,8 +82,14 @@ cat > node_modules/color-diff-napi/package.json << 'PKGJSON'
 {"name":"color-diff-napi","version":"0.0.0-stub","main":"index.js","type":"module"}
 PKGJSON
 cat > node_modules/color-diff-napi/index.js << 'STUBJS'
-export class ColorDiff { constructor() {} render() { return null; } }
-export class ColorFile { constructor() {} highlight() { return ''; } }
+export class ColorDiff {
+  constructor(patch, firstLine, filePath, fileContent) {}
+  render(theme, width, dim) { return ''; }
+}
+export class ColorFile {
+  constructor(content, language) { this.content = content; }
+  render(theme, width, dim) { return this.content || ''; }
+}
 export function getSyntaxTheme() { return null; }
 STUBJS
 echo "  Created: color-diff-napi"
