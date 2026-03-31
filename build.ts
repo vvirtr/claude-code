@@ -111,6 +111,7 @@ const define: Record<string, string> = {
   "MACRO.NATIVE_PACKAGE_URL": JSON.stringify("@anthropic-ai/claude-code"),
   "MACRO.PACKAGE_URL": JSON.stringify("@anthropic-ai/claude-code"),
   "MACRO.VERSION_CHANGELOG": JSON.stringify(""),
+  "process.env.NODE_ENV": JSON.stringify("production"),
 };
 
 const result = await Bun.build({
