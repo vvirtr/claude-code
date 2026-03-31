@@ -84,11 +84,14 @@ PKGJSON
 cat > node_modules/color-diff-napi/index.js << 'STUBJS'
 export class ColorDiff {
   constructor(patch, firstLine, filePath, fileContent) {}
-  render(theme, width, dim) { return ''; }
+  render(theme, width, dim) { return []; }
 }
 export class ColorFile {
   constructor(content, language) { this.content = content; }
-  render(theme, width, dim) { return this.content || ''; }
+  render(theme, width, dim) {
+    if (!this.content) return [];
+    return this.content.split('\n');
+  }
 }
 export function getSyntaxTheme() { return null; }
 STUBJS
