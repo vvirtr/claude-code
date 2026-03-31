@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "strict": true,
+    "esModuleInterop": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "allowJs": true,
+    "baseUrl": ".",
+    "paths": {
+      "src/*": ["./src/*"],
+      "bun:bundle": ["./stubs/bun-bundle.d.ts"],
+      "@ant/computer-use-mcp": ["./stubs/@ant/computer-use-mcp/index.d.ts"],
+      "@ant/computer-use-mcp/*": ["./stubs/@ant/computer-use-mcp/*"],
+      "@ant/computer-use-swift": ["./stubs/@ant/computer-use-swift/index.d.ts"],
+      "@ant/computer-use-input": ["./stubs/@ant/computer-use-input/index.d.ts"],
+      "@anthropic-ai/claude-agent-sdk": ["./stubs/@anthropic-ai/claude-agent-sdk/index.d.ts"],
+      "@anthropic-ai/mcpb": ["./stubs/@anthropic-ai/mcpb/index.d.ts"]
+    },
+    "types": ["bun-types", "node"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "stubs/**/*.d.ts"],
+  "exclude": ["node_modules", "dist"]
+}

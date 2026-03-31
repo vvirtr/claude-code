@@ -1,0 +1,8 @@
+node_modules/
+dist/
+bun.lock
+*.map
+.claude/
+.env
+.env.*
+__pycache__/
