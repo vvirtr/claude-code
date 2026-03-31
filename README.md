@@ -40,7 +40,7 @@ bun dist/cli.js -p "Hello"
 # С кастомным провайдером (OpenRouter, Z.AI, etc.)
 export ANTHROPIC_API_KEY="your-key"
 export ANTHROPIC_BASE_URL="https://openrouter.ai/api/v1"
-export ANTHROPIC_MODEL="anthropic/claude-sonnet-4"
+export ANTHROPIC_MODEL="anthropic/claude-opus-4.6"
 bun dist/cli.js
 ```
 
